@@ -10,5 +10,7 @@ namespace Practica01.Service
         public void DeleteStudents(Estudiantes es);
 
         public List<Estudiantes> GetAll();
+
+        public Estudiantes LoadInformation(Estudiantes es);
     }
 }
