@@ -11,6 +11,7 @@
         <tr>
             <th>Name</th>
              <th>Acciones</th>
+            
         </tr>
 
     </thead>
@@ -19,8 +20,9 @@
         {
             <tr>
                 <td>@iterar.Name  </td>
-                <td>@Html.ActionLink("Students","Delete",new{id=@iterar.Id}) </td>
-                <td>@Html.ActionLink("Students","Load",new{id=@iterar.Id}) </td>
+                @*El primer delete es para texto el segundo delte es la accion del controlador*@
+                <td>@Html.ActionLink("Delete","Delete",new{id=@iterar.Id},new{@class="btn btn-danger"}) 
+                @Html.ActionLink("Update","Load",new{id=@iterar.Id},new{@class="btn btn-warning"} ) </td>
             </tr>
         }
 
