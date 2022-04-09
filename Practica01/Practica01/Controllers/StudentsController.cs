@@ -37,11 +37,22 @@ namespace Practica01.Controllers
 
         }
 
+
         public IActionResult Guardar() { 
+
+            
         
             return View();
         }
 
+        public IActionResult Save(Estudiantes es) {
+
+            Estudiante.AddStudents(es);
+            return RedirectToAction("Index");
+
+        }
+
+       
         public IActionResult Index()
         {
             //Estudiantes  es = new Estudiantes();
